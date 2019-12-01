@@ -1,0 +1,15 @@
+<form id="form" action="javascript:">
+  <h1>Лабораторная работа</h1>
+  <label>Введите натуральное число:</label>
+  <input type="number" pattern="^[\d]+$" name="value" placeholder="33" min = 1 max = 1000000 />
+  <input type="submit" class = "btn btn-primary" value="Найти палиндром"/>
+</form>
+<table id="table" style="display:none" class="table table-hover">
+  <tr>
+    <th>Десятичная система</th>
+    <th>Двоичная система</th>
+  </tr>
+</table>
+<div id="error" style="display:none" class = "alert alert-danger">
+  <strong>Ошибка!</strong> Timeout error
+</div>

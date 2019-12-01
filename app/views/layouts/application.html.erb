@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LR1112</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav class="navbar fixed-top">
+    <% if current_user %>
+      Вы вошли как <%= current_user.name %>
+      <%= link_to "Выйти", '/logout' %>
+    <% else %>
+      <%= link_to 'Войти', '/login' %>
+      <%= link_to 'Регистрация', '/signup' %>
+    <% end %>
+  </nav>
+  <div class = "container">
+    <%= yield %>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+@import "bootstrap";
+input, label{
+  margin: 0.5em;
+}
+td, th{
+  word-break: break-all;
+}
+nav, .container{
+  background: white;
+}
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container{
+  padding: 1em;
+  margin-top:3em;
+  text-align: center;
+}
