@@ -14,18 +14,14 @@ class Answer < ApplicationRecord
 
   def calculate
     a = query.to_i
-    result = if !a || a.empty?
-                'Enter number!'
-              else
-                res = []
-                while a.positive?
-                  if palindrome?(a.to_s) && palindrome?(a.to_s(2))
-                    res.push [a.to_s, a.to_s(2)]
-                  end
-                  n -= 1
-                end
-                res
-              end
+    res = []
+    while a.positive?
+      if palindrome?(a.to_s) && palindrome?(a.to_s(2))
+        res.push [a.to_s, a.to_s(2)]
+      end
+      a -= 1
+    end
+    result = res
     self.solution = ActiveSupport::JSON.encode(result)
   end
 end
